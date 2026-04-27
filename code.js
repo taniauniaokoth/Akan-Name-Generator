@@ -10,6 +10,11 @@ function getName() {
     return;
   }
 
+  if (day < 1 || day > 31) {
+    alert("Invalid day");
+    return;
+  }
+
   if (month < 1 || month > 12) {
     alert("Invalid month");
     return;
