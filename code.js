@@ -1,8 +1,8 @@
 function getName() {
-    let day = Number(document.getElementById("day").value);
-    let month = Number(document.getElementById("month").value);
-    let year = Number(document.getElementById("year").value);
-    let gender = document.getElementById("gender").value;
+  let day = Number(document.getElementById("day").value);
+  let month = Number(document.getElementById("month").value);
+  let year = Number(document.getElementById("year").value);
+  let gender = document.getElementById("gender").value;
 
   // validation
   if (day === "" || month === "" || year === "") {
@@ -42,5 +42,7 @@ function getName() {
   }
 
   // output
-  document.getElementById("result").innerHTML = "Your Akan name is " + name;
+  document.getElementById("result").innerHTML = "Your Akan name is: " + name;
+
+  document.getElementById("result").style.color = "#6c63ff";
 }
