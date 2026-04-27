@@ -4,4 +4,10 @@ function getName() {
   let year = document.getElementById("year").value;
   let gender = document.getElementById("gender").value;
 
+  // validation
+  if (day === "" || month === "" || year === "") {
+    alert("Fill all fields");
+    return;
+  }
+
   
