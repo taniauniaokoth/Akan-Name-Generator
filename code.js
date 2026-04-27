@@ -52,6 +52,8 @@ function getName() {
     name = female[d];
   }
 
+  console.log("Akan Name:", name);
+
   //  display result
   let resultBox = document.getElementById("result");
   resultBox.innerHTML = "Your Akan name is: " + name;
