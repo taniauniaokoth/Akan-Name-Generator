@@ -10,4 +10,13 @@ function getName() {
     return;
   }
 
- 
+  if (month < 1 || month > 12) {
+    alert("Invalid month");
+    return;
+  }
+
+  // arrays
+  let male = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+  let female = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+
+  
