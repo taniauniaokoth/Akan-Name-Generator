@@ -1,18 +1,24 @@
 body {
-text-align: center;
-font-family: Arial;
-background-color: rgb(241, 206, 241);
+  text-align: center;
+  font-family: Arial;
+  background-color: rgb(241, 206, 241);
 }
 
-input, select {
-display: block;
-margin: 10px auto;
-padding: 8px;
+input,
+select {
+  display: block;
+  margin: 10px auto;
+  padding: 8px;
 }
 
 button {
-padding: 10px;
-background-color: purple;
-color: white;
-border: none;
+  padding: 10px;
+  background-color: purple;
+  color: white;
+  border: none;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 20px;
 }
