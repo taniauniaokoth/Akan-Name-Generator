@@ -1,9 +1,18 @@
+/* header */
+header {
+  background-color: #78bfef;
+  color: white;
+  padding: 40px 20px;
+  
+}
+
+
 /* Page animation */
 body {
+
   text-align: center;
   font-family: Arial, sans-serif;
   background-color: #f0f2f5;
-  margin-top: 50px;
 
   animation: fadeIn 1s ease-in;
 }

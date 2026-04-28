@@ -44,7 +44,7 @@ function getName() {
     (Math.floor(CC / 4) -
       2 * CC -
       1 +
-      45 * YY +
+      Math.floor((5 * YY) / 4) +
       Math.floor((26 * (month + 1)) / 10) +
       day) %
     7;
