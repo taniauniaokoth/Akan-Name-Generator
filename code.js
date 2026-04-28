@@ -41,15 +41,17 @@ function getName() {
   let YY = year % 100;
 
   let d =
-    Math.floor(CC / 4) -
-    2 * CC +
-    Math.floor((5 * YY) / 4) +
-    Math.floor((26 * (month + 1)) / 10) +
-    day -
-    1;
-  // fix negatives
-  d = ((d % 7) + 7) % 7;
+    (Math.floor(CC / 4) -
+      2 * CC +
+      Math.floor((5 * YY) / 4) +
+      Math.floor((26 * (month + 1)) / 10) +
+      day -
+      1) %
+    7;
 
+  // fix negative results
+  d = (d + 7) % 7;
+  
   //  pick name
   let name;
 
