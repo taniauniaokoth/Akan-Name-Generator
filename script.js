@@ -1,7 +1,7 @@
 function getName() {
   // get input values
-  let day = Number(document.getElementById("day").value);
-  let month = Number(document.getElementById("month").value); // ✅ FIXED
+  let day = Number(document.getElementById("day").value); //html returns strings
+  let month = Number(document.getElementById("month").value); 
   let year = Number(document.getElementById("year").value);
   let gender = document.getElementById("gender").value;
 
@@ -26,8 +26,9 @@ function getName() {
     return;
   }
 
-  // ✅ February + month fix
+  //  February + month fix
   let daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
 
   if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
     daysInMonth[1] = 29;
@@ -39,10 +40,10 @@ function getName() {
   }
 
   // Akan names
-  let male = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+  let male = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];  //efficient mapping
   let female = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
-  // formula (UNCHANGED ✅)
+  // formula 
   let CC = Math.floor(year / 100);
   let YY = year % 100;
 
@@ -55,6 +56,7 @@ function getName() {
       1) %
     7;
 
+  //  eliminate negative results 
   d = (d + 7) % 7;
 
   // pick name
