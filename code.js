@@ -46,10 +46,11 @@ function getName() {
       Math.floor((5 * YY) / 4) +
       Math.floor((26 * (month + 1)) / 10) +
       day -
-      1);
- 
-    // removes the negatives
-    d = ((d % 7) + 7) % 7;
+      1) %
+    7;
+
+  // fix negatives
+  d = (d + 7) % 7;
 
   //  pick name
   let name;
