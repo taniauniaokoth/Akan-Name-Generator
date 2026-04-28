@@ -1,91 +1,35 @@
 # Akan Name Generator
 
-##  Author
-
+## Author
 Tania Okoth
 
----
+## Project Description
+This web application calculates the day of the week a user was born and assigns them an Akan name based on Ghanaian naming culture.
 
-##  Description
+## How It Works
+- User enters birth date
+- User selects gender
+- JavaScript calculates weekday using a mathematical formula
+- App returns correct Akan name
 
-This is a simple web application that calculates the day of the week a user was born and assigns them an Akan name based on their gender.
+## Features
+- Input validation
+- Gender selection
+- Accurate weekday calculation
+- Dynamic result display
+- Clean UI with animations
 
-The application takes the user’s birthdate (day, month, and year), determines the exact day of the week, and then matches it with the corresponding Akan name from Ghanaian culture.
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
 
----
+## Setup Instructions
+1. Clone repository
+2. Open index.html in browser
 
-##  Features
+## Live Site
+https://github.com/taniauniaokoth/Akan-Name-Generator
 
-* User inputs their birthdate
-* User selects their gender
-* Application validates user input
-* Calculates the correct day of the week
-* Displays the correct Akan name
-* Shows alert messages for invalid inputs
-
----
-
-##  Technologies Used
-
-* HTML
-* CSS
-* JavaScript
-
----
-
-##  Setup Instructions
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/taniauniaokoth/Akan-Name-Generator
-```
-
-2. Navigate into the project folder:
-
-```bash
-cd akan-name-generator
-```
-
-3. Open `index.html` in your browser
-
----
-
-##  Live Site
-
-
----
-
-##  BDD (Behavior Driven Development)
-
-| Behavior                          | Input                    | Output                     |
-| --------------------------------- | ------------------------ | -------------------------- |
-| User enters valid date and gender | Day, Month, Year, Gender | Displays correct Akan name |
-| User leaves fields empty          | No input                 | Alert message shown        |
-| User enters invalid date          | e.g Month > 12           | Alert message shown        |
-
----
-
-##  How It Works
-
-The application uses JavaScript to:
-
-* Collect user input from the form
-* Validate the data
-* Use the built-in Date object to determine the day of the week
-* Match the result with predefined Akan name arrays
-* Display the result on the webpage
-
----
-
-##  Contact
-
-Email: taniauniaokoth@gmail.com
-
----
-
-##  License
-
-This project is licensed under the MIT License.
-
-© 2026 Tania Okoth
+## License
+MIT License © 2026
