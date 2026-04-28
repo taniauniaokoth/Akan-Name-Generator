@@ -36,12 +36,23 @@ function getName() {
   let male = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
   let female = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
-  //  create date
-  let date = new Date(year, month - 1, day);
+  // calculate the day of the week
+  let CC = Math.floor(year / 100);
+  let YY = year % 100;
 
-  // get day of week (0–6)
-  let d = date.getDay();
-  console.log("Day index:", d);
+  let d =
+    (Math.floor(CC / 4) -
+      2 * CC -
+      1 +
+      45 * YY +
+      Math.floor((26 * (month + 1)) / 10) +
+      day) %
+    7;
+
+  // fix negative values
+  if (d < 0) {
+    d = (d + 7) % 7;
+  }
 
   //  pick name
   let name;
