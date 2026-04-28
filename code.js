@@ -5,14 +5,14 @@ function getName() {
   let year = Number(document.getElementById("year").value);
   let gender = document.getElementById("gender").value;
 
-  //  DEBUG (optional but useful)
+  // DEBUG
   console.log("Day:", day);
   console.log("Month:", month);
   console.log("Year:", year);
   console.log("Gender:", gender);
 
-  //  validation
-  if (isNaN(day) || isNaN(month) || isNaN(year)) {
+  // validation
+  if (!day || !month || !year) {
     alert("Please fill all fields");
     return;
   }
@@ -32,11 +32,25 @@ function getName() {
     return;
   }
 
-  //  Akan name arrays
+  //  days in each month
+  let daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+  //  leap year
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    daysInMonth[1] = 29;
+  }
+
+  //  correct date validation
+  if (day > daysInMonth[month - 1]) {
+    alert("Invalid date for that month");
+    return;
+  }
+
+  // Akan names
   let male = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
   let female = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
-  // calculate the day of the week
+  // calculation
   let CC = Math.floor(year / 100);
   let YY = year % 100;
 
@@ -49,33 +63,25 @@ function getName() {
       1) %
     7;
 
-  // fix negative results
+  // fix negatives
   d = (d + 7) % 7;
-  
-  //  pick name
-  let name;
 
-  if (gender === "male") {
-    name = male[d];
-  } else {
-    name = female[d];
-  }
+  // pick name
+  let name = gender === "male" ? male[d] : female[d];
 
   console.log("Akan Name:", name);
 
-  //  display result
+  // display
   let resultBox = document.getElementById("result");
   resultBox.innerHTML = "Your Akan name is: " + name;
-
-  //  small styling touch
   resultBox.style.color = "#6c63ff";
 
-  //  trigger animation
+  // animation
   resultBox.classList.remove("show");
-  void resultBox.offsetWidth; // reset animation
+  void resultBox.offsetWidth;
   resultBox.classList.add("show");
 
-  //  clear inputs (nice UX)
+  // clear inputs
   document.getElementById("day").value = "";
   document.getElementById("month").value = "";
   document.getElementById("year").value = "";
