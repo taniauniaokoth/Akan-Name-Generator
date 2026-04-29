@@ -1,7 +1,7 @@
 function getName() {
   // get input values
   let day = Number(document.getElementById("day").value); //html returns strings
-  let month = Number(document.getElementById("month").value); 
+  let month = Number(document.getElementById("month").value);
   let year = Number(document.getElementById("year").value);
   let gender = document.getElementById("gender").value;
 
@@ -40,10 +40,10 @@ function getName() {
   }
 
   // Akan names
-  let male = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];  //efficient mapping
+  let male = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"]; //efficient mapping
   let female = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
-  // formula 
+  // formula
   let CC = Math.floor(year / 100);
   let YY = year % 100;
 
@@ -56,8 +56,10 @@ function getName() {
       1) %
     7;
 
-  //  eliminate negative results 
-  d = (d + 7) % 7;
+  //  eliminate negative results
+  if (d < 0) {
+    d = (d + 7) % 7;
+  }
 
   // pick name
   let name = gender === "male" ? male[d] : female[d];
